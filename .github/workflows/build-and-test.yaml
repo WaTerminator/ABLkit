@@ -24,7 +24,7 @@ jobs:
     - uses: syphar/restore-virtualenv@v1
       id: cache-virtualenv
       with:
-        custom_cache_key_element: '0.2.0'
+        custom_cache_key_element: ABLkit
         requirement_files: requirements.txt
 
     - uses: syphar/restore-pip-download-cache@v1
@@ -33,7 +33,7 @@ jobs:
     - name: Install SWI-Prolog on Ubuntu
       if: matrix.os == 'ubuntu-latest'
       run: sudo apt-get install swi-prolog
-    - name: Install SWI-Prolog on Windows Sys
+    - name: Install SWI-Prolog on Windows
       if: matrix.os == 'windows-latest'
       run: choco install swi-prolog
     - name: Install SWI-Prolog on MACOS
