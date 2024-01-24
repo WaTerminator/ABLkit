@@ -33,7 +33,7 @@ jobs:
     - name: Install SWI-Prolog on Ubuntu
       if: matrix.os == 'ubuntu-latest'
       run: sudo apt-get install swi-prolog
-    - name: Install SWI-Prolog on Windows
+    - name: Install SWI-Prolog on Windows Sys
       if: matrix.os == 'windows-latest'
       run: choco install swi-prolog
     - name: Install SWI-Prolog on MACOS
